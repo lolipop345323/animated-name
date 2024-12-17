@@ -1,0 +1,203 @@
+h1 {
+  color: Purple;
+  font-size: 100px;
+  text-align: center;
+  text-shadow: 0 0 25px purple;
+  animation: text 10s linear 9s 1;
+}
+
+body {
+  background-color: black;
+}
+
+.part {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  width: 300px;
+  height: 700px;
+  background-color: rgb(71, 71, 71);
+
+}
+
+
+.sp1 {
+  animation: gradient-move 1.5s linear 1s infinite;
+}
+
+.sp2 {
+  animation: gradient-move 1.5s linear 2s infinite;
+}
+
+.sp3 {
+  animation: gradient-move 1.5s linear 3s infinite;
+}
+
+.sp4 {
+  animation: gradient-move 1.5s linear 4s infinite;
+}
+
+
+@keyframes sp {
+  /* 0%,100% {
+    transform:scale(1);
+  }
+
+  50% {
+    transform:scale(1.5);
+  } */
+}
+
+
+.window {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(34, 34, 34);
+  margin: auto;
+  animation: w 4s ease-in 9s infinite forwards;
+}
+
+.w1,
+.w5,
+.w9 {
+  animation: w 4s ease-in 7s infinite forwards;
+}
+
+.w4,
+.w7,
+.w16 {
+  animation: w 4s ease-in 5s infinite forwards;
+}
+
+.w11,
+.w8,
+.w15 {
+  animation: w 4s ease-in 8s infinite forwards;
+}
+
+.w3,
+.w7,
+.w14 {
+  animation: w 4s ease-in 9s infinite forwards;
+}
+
+.w2,
+.w10,
+.w12,
+.w13 {
+  animation: w 4s ease-in 12s infinite forwards;
+}
+
+@keyframes w {
+
+  0%,
+  100% {
+    background-color: rgb(34, 34, 34);
+  }
+
+  10% {
+    background-color: rgb(255, 168, 17);
+  }
+}
+
+.animation {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: tower 10s linear .2s 1;
+}
+
+.gradient-text {
+  display: inline-block;
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ff0000, #00ff00, #0000ff, #ff0000);
+  background-size: 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  /* animation: gradient-move 3s infinite linear; */
+}
+
+
+.wordspan {
+  animation: wspan 2s linear 5s infinite forwards;
+}
+
+@keyframes wspan {
+  0%, 100% {
+    transform: rotateY(0);
+  }
+
+  50% {
+    transform: rotateY(90deg);
+  }
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0%;
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    background-position: 100%;
+    transform: scale(1);
+  }
+}
+
+.door {
+  height: 100px;
+  width: 50px;
+  margin-left: 220px;
+  margin-top: 50px;
+  background-color: rgb(26, 26, 26);
+}
+
+@keyframes tower {
+  from {
+    top: 100%;
+  }
+
+  to {
+    top: 250px;
+  }
+
+}
+
+@keyframes text {
+
+  0%,
+  100% {
+    font-size: 100px;
+  }
+
+  25% {
+    font-size: 30px;
+  }
+
+  50% {
+    color: rgb(255, 0, 81);
+  }
+}
+
+
+@media (max-width: 443px) {
+  .gradient-text {
+    font-size: 2.5rem;
+  }
+
+  .part {
+    width: 250px;
+    height: 600px;
+  }
+}
