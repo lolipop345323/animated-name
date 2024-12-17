@@ -8,6 +8,7 @@ h1 {
 
 body {
   background-color: black;
+  overflow-y: hidden;
 }
 
 .part {
@@ -21,9 +22,7 @@ body {
   width: 300px;
   height: 700px;
   background-color: rgb(71, 71, 71);
-
 }
-
 
 .sp1 {
   animation: gradient-move 1.5s linear 1s infinite;
@@ -40,18 +39,6 @@ body {
 .sp4 {
   animation: gradient-move 1.5s linear 4s infinite;
 }
-
-
-@keyframes sp {
-  /* 0%,100% {
-    transform:scale(1);
-  }
-
-  50% {
-    transform:scale(1.5);
-  } */
-}
-
 
 .window {
   height: 50px;
@@ -164,12 +151,12 @@ body {
 }
 
 @keyframes tower {
-  from {
-    top: 100%;
+  0% {
+    transform: translate(-50%, 1200px);
   }
 
-  to {
-    top: 250px;
+  100% {
+    transform: translate(-50%, 100px);
   }
 
 }
