@@ -5,10 +5,64 @@ h1 {
   text-shadow: 0 0 25px purple;
   animation: text 10s linear 9s 1;
 }
+/* дз зробити зміну дня і ночі */
 
 body {
   background-color: black;
   overflow-y: hidden;
+}
+
+
+.sun {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgb(255, 191, 0);
+}
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.5s ease;
+}
+
+.nextc {
+  width: 100px;
+  height: 100px;
+  margin: 100px;
+  background-color: #ffd332;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow:15px 15px 30px #ffe895;
+  animation: sunshadow 5s linear 2s infinite;
+  transition: background-color 0.5s ease;
+  border: 0;
+}
+
+@keyframes sunshadow {
+  0% {
+    box-shadow:15px 15px 30px #ffe895;
+  }
+
+  25% {
+    box-shadow:45px 25px 30px #fbe38d;
+  }
+
+  50% {
+    box-shadow:25px 55px 30px #fbe38d;
+  }
+
+  100% {
+    box-shadow:15px 15px 30px #fbe38d;
+    background-color: #ffce1c;
+  }
+}
+
+.moon {
+  background-color: #fff;
+  box-shadow:10px 10px 35px #fffffd;
+  animation: none;
 }
 
 .part {
